@@ -1,6 +1,6 @@
 ######################## fit a decision tree ############################
 
-### The following code constructs decision tree models to identify combinations of features to prospectively classify cells. The code reads in single-cell RNA expression matrix along with a binarized categorization for features of interest. The sample is then randomly divided into a training and testing cohort. Decision trees are then fit to the training dataset. Prediction statistics are then calculated on the testing dataset. 
+### The following code constructs decision tree models to identify combinations of features to prospectively classify cells and corresponds with data presented in Extended Data Figure 9 [Lu et al. Nat Immunol 2025]. The code reads in single-cell RNA expression matrix along with a binarized categorization for features of interest. The sample is then randomly divided into a training and testing cohort. Decision trees are then fit to the training dataset. Prediction statistics are then calculated on the testing dataset. 
 
 #########################################################################
 
