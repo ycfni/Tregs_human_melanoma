@@ -1,18 +1,17 @@
-
-
 ######################## fit a decision tree ############################
+
+### The following code constructs decision tree models to identify combinations of features to prospectively classify cells. The code reads in single-cell RNA expression matrix along with a binarized categorization for features of interest. The sample is then randomly divided into a training and testing cohort. Decision trees are then fit to the training dataset. Prediction statistics are then calculated on the testing dataset. 
+
+#########################################################################
+
 # import the library for building a decision tree
 library(rpart)
 library(rpart.plot)
 
 # load the data from the path
-
 load("/path/to/your/file.RData")
 
-# show first few rows of the data
-head(metadata)
-
-# filter data to contain the outcome of interest and all predictors
+# filter data to contain the outcome of interest and all predictors. Examples provided included whether the sample is tumor antigen reactive ("ltsr.react"), KIR ("is.KIR"), KLRD1 ("is.KLRD1"), or TIGIT ("is.TIGIT"). 
 data <- metadata[,c("ltsr.react","is.KIR","is.CX3CR1","is.KLRD1","is.TIGIT","is.KLRG1")] 
 
 # indicator used to divide the training and testing set with sample size 1:1
