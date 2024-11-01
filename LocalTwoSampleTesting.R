@@ -1,3 +1,7 @@
+####################################### Local Two Sample Testing  ##############################################
+The following code identifies differentially abundant populations in single-cell RNA sequencing data using Local Two Sample Testing over Graphs and Point-Couds by Random-Walk Distributions, as described by Landa et al. [arxiv 2021]. The following code was used in Lu et al. [Nat Immunol 2025] to identify differentially abundant populations of tumor antigen reactive T cells in the blood of patients with melanoma. 
+################################################################################################################
+
 require(tictoc)
 require(Rcpp)
 require(KRLS)
@@ -7,8 +11,6 @@ require(GenBinomApps)
 require(ggplot2)
 
 `%notin%` <- Negate(`%in%`) 
-
-Rcpp::sourceCpp("/banach1/rq25/DA_project_boris_method/Rcpp/multiply.cpp")
 
 ########Step1: Construct affinity matrix
 get_affinity_matrix <- function(data, 
